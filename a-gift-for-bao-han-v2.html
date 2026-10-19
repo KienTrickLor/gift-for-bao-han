@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff0f6">
+<meta name="description" content="Món quà 20/10 nhỏ xinh Trung Kiên dành tặng Bảo Hân.">
+<title>For Bảo Hân ♡ — from Trung Kiên</title>
+<style>
+:root{
+  --pink:#f8a8c5;--pink2:#ffd7e6;--deep:#c54479;--deep2:#9f315f;
+  --cream:#fff9fc;--ink:#6d3651;--muted:#a66b86;--glass:#ffffffc9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100svh;overflow-x:hidden;color:var(--ink);
+  font-family:ui-rounded,"Arial Rounded MT Bold",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(ellipse at 20% 10%,#fff 0,transparent 35%),
+    radial-gradient(ellipse at 85% 80%,#ffe0ec 0,transparent 38%),
+    linear-gradient(145deg,#fff7fb,#ffeaf2 52%,#fff5fa)}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible{outline:3px solid var(--deep);outline-offset:4px}
+button:disabled{opacity:.65;cursor:default}
+#sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:5}
+.particle{position:absolute;bottom:-45px;animation:rise var(--dur,5s) linear forwards;opacity:0;will-change:transform}
+@keyframes rise{0%{transform:translate3d(0,0,0) rotate(0) scale(.55);opacity:0}12%{opacity:.9}82%{opacity:.8}100%{transform:translate3d(var(--drift,20px),-115svh,0) rotate(var(--spin,45deg)) scale(1.2);opacity:0}}
+.wrap{position:relative;z-index:2;width:min(100%,540px);min-height:100svh;margin:auto;padding:calc(24px + env(safe-area-inset-top)) 19px calc(28px + env(safe-area-inset-bottom));display:flex;flex-direction:column;justify-content:center}
+.brand{text-align:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.23em;color:var(--muted);margin-bottom:11px}
+h1{font-size:clamp(2.5rem,11vw,3.8rem);line-height:.98;letter-spacing:-.07em;text-align:center;margin:0;color:var(--deep)}
+h1 span{display:inline-block;animation:heartBeat 1.8s infinite}
+@keyframes heartBeat{0%,100%{transform:scale(1)}12%{transform:scale(1.18)}24%{transform:scale(1)}36%{transform:scale(1.1)}}
+.lead{max-width:340px;text-align:center;margin:14px auto 22px;color:#98617a;line-height:1.65;font-size:.97rem}
+.card{position:relative;overflow:hidden;border:1px solid #fff;background:var(--glass);border-radius:32px;padding:24px 19px 21px;text-align:center;box-shadow:0 22px 70px #bd527b20,inset 0 1px 0 #fff;backdrop-filter:blur(14px)}
+.card:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#ffd6e6,#e98ab0,#ffd6e6)}
+.stage{height:220px;position:relative;display:grid;place-items:center;margin-bottom:8px;isolation:isolate}
+.glow{position:absolute;width:175px;height:175px;border-radius:50%;background:radial-gradient(circle,#ffd2e3a8,transparent 70%);animation:glow 3s ease-in-out infinite;z-index:-1}
+@keyframes glow{0%,100%{transform:scale(.9);opacity:.65}50%{transform:scale(1.16);opacity:1}}
+.star{position:absolute;color:#e5a0ba;font-size:1.3rem;animation:twinkle 2s ease-in-out infinite}
+.st1{left:13%;top:18%}.st2{right:14%;top:23%;animation-delay:.5s}.st3{left:22%;bottom:14%;animation-delay:1s}.st4{right:23%;bottom:13%;animation-delay:.8s}
+.gift{width:174px;height:157px;position:relative;transform-origin:50% 85%;filter:drop-shadow(0 14px 10px #bd527b24);transition:transform .35s}
+.gift:active{transform:scale(.97)}
+.box{position:absolute;left:11px;bottom:0;width:152px;height:104px;border-radius:9px 9px 15px 15px;background:linear-gradient(135deg,#ffb4ce,#e66c9c);box-shadow:inset -8px -5px 0 #b83d7222}
+.ribbon-v{position:absolute;z-index:2;left:77px;bottom:0;width:22px;height:104px;background:linear-gradient(90deg,#fff5f8,#ffe4ed)}
+.ribbon-h{position:absolute;z-index:4;top:39px;left:4px;width:166px;height:31px;border-radius:8px;background:linear-gradient(135deg,#ffcade,#f38bb2);box-shadow:0 3px 5px #b83d7212}
+.ribbon-h:after{content:"";position:absolute;left:73px;top:0;width:20px;height:31px;background:#fff4f8}
+.lid{position:absolute;z-index:5;top:33px;left:4px;width:166px;height:32px;border-radius:8px;background:linear-gradient(135deg,#ffc5d9,#f38bb2);transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .5s}
+.bow{position:absolute;z-index:6;top:8px;left:59px;width:56px;height:35px;transition:transform .7s,opacity .4s}
+.bow:before,.bow:after{content:"";position:absolute;top:0;width:30px;height:25px;border:7px solid #fff4f8;border-radius:70% 70% 45% 70%}
+.bow:before{left:0;transform:rotate(25deg)}.bow:after{right:0;transform:scaleX(-1) rotate(25deg)}
+.bow i{position:absolute;z-index:2;left:22px;top:13px;width:14px;height:14px;border-radius:50%;background:#fff4f8}
+.gem{position:absolute;z-index:3;top:77px;left:72px;color:#fff2f7;font-size:31px;text-shadow:0 2px 0 #d9578b}
+.gift.open .lid{transform:translate(9px,-83px) rotate(13deg)}
+.gift.open .bow{transform:translate(15px,-83px) rotate(20deg);opacity:0}
+.gift.open{animation:pop .75s ease}
+@keyframes pop{0%{transform:scale(1)}35%{transform:scale(1.1) rotate(-3deg)}65%{transform:scale(1.04) rotate(2deg)}100%{transform:scale(1)}}
+.primary,.secondary,.tiny{border:0;min-height:48px;border-radius:999px;padding:13px 20px;transition:transform .18s,box-shadow .2s}
+.primary{width:100%;color:#fff;background:linear-gradient(105deg,#e66d9b,#c64278);font-weight:800;box-shadow:0 10px 22px #c5447938}
+.primary:active,.secondary:active,.tiny:active{transform:scale(.98)}
+.secondary{width:100%;margin-top:10px;color:var(--deep);background:#fff0f6;border:1px solid #f6c5d8}
+.hint{font-size:.82rem;color:#a36c84;margin:12px 0 0}
+.hidden{display:none!important}
+.letter{text-align:left;animation:appear .7s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.kicker{text-align:center;text-transform:uppercase;letter-spacing:.19em;font-size:.68rem;color:#c45b83;font-weight:800;margin:0 0 8px}
+.letter h2{text-align:center;color:var(--deep);font-size:clamp(1.65rem,7vw,2.1rem);line-height:1.16;letter-spacing:-.04em;margin:0 0 16px}
+.letter p{font-size:.98rem;line-height:1.82;margin:0 0 13px}
+.sign{text-align:right;color:var(--deep);font-weight:800;margin-top:17px!important}
+.secret{margin-top:16px;padding:15px;border:1px dashed #efa5c1;border-radius:18px;background:#fff5f9;text-align:center}
+.secret p{margin:0;line-height:1.7}
+.secret .secret-text{display:none;margin-top:10px;color:#a33d6a;font-weight:700}
+.secret.revealed .secret-text{display:block;animation:appear .5s ease}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:15px}
+.tiny{background:#fff0f6;color:#b54476;border:1px solid #f5c5d8;padding:11px 10px;min-height:45px;font-size:.88rem;font-weight:700}
+.counter{font-size:.82rem;color:#a36c84;text-align:center;margin:10px 0 0}
+.footer{text-align:center;color:#bd8aa0;font-size:.72rem;margin-top:18px}
+.toast{position:fixed;z-index:10;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#8f315a;color:white;border-radius:999px;padding:11px 17px;font-size:.86rem;box-shadow:0 8px 30px #70274730;transition:.25s;white-space:nowrap;max-width:90vw}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes twinkle{0%,100%{transform:scale(.75) rotate(-8deg);opacity:.5}50%{transform:scale(1.2) rotate(12deg);opacity:1}}
+@media(min-height:790px){.stage{height:240px}.card{padding:28px 23px 24px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div>
+<div class="wrap">
+  <div class="brand">A little surprise, made with love</div>
+  <h1>Happy 20/10 <span>♡</span></h1>
+  <p class="lead">Bảo Hân ơi, anh có một món quà nhỏ dành riêng cho em. Chạm để mở nhé! 🌷</p>
+  <section class="card" aria-live="polite">
+    <div id="giftScreen">
+      <div class="stage">
+        <div class="glow"></div>
+        <span class="star st1">✦</span><span class="star st2">✧</span><span class="star st3">♡</span><span class="star st4">✦</span>
+        <div class="gift" id="gift" role="img" aria-label="Hộp quà màu hồng có nơ">
+          <div class="box"></div><div class="ribbon-v"></div><div class="gem">♡</div><div class="ribbon-h"></div><div class="lid"></div><div class="bow"><i></i></div>
+        </div>
+      </div>
+      <button class="primary" id="openBtn">Mở quà của em 🎁</button>
+      <p class="hint">Có một điều anh muốn nói với em…</p>
+    </div>
+    <article class="letter hidden" id="letter">
+      <p class="kicker">A little letter for you ♡</p>
+      <h2>Gửi Bảo Hân của anh 🌸</h2>
+      <p>Chúc em có một ngày 20/10 thật vui vẻ, luôn được yêu thương và gặp thật nhiều điều dịu dàng.</p>
+      <p>Anh mong em luôn giữ nụ cười trên môi, tự tin với những điều em làm và nhớ rằng em xứng đáng với những điều tốt đẹp nhất.</p>
+      <p>Cảm ơn em vì đã xuất hiện và khiến những ngày bình thường của anh trở nên đặc biệt hơn. Dù hôm nay em vui hay có chút mệt mỏi, anh vẫn mong món quà nhỏ này có thể làm em mỉm cười. 💗</p>
+      <p>Anh không giỏi làm những món quà thật lớn, nên anh gửi em một góc nhỏ xinh xắn trên mạng — cùng tất cả sự chân thành của anh.</p>
+      <p class="sign">Chúc em luôn hạnh phúc,<br>Anh Trung Kiên ♡</p>
+      <div class="secret" id="secretBox">
+        <p><strong>💌 Còn một điều bí mật nữa…</strong></p>
+        <button class="secondary" id="secretBtn">Mở lời nhắn bí mật</button>
+        <p class="secret-text" id="secretText">Bảo Hân nhớ chăm sóc bản thân, ăn uống đầy đủ và đừng quên rằng có một Trung Kiên luôn mong em vui vẻ nhé. Anh gửi em một cái ôm thật ấm áp từ xa. ♡</p>
+      </div>
+      <div class="actions">
+        <button class="tiny" id="heartBtn">Thả tim cho anh ♡</button>
+        <button class="tiny" id="shareBtn">Gửi lời chúc ↗</button>
+      </div>
+      <p class="counter" id="counter">Em đã gửi anh 0 trái tim 💗</p>
+      <button class="secondary" id="againBtn">Cất quà rồi mở lại ↻</button>
+    </article>
+  </section>
+  <div class="footer">Made with love by Trung Kiên · for Bảo Hân · 20 October</div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const sky = $('sky'), gift = $('gift'), giftScreen = $('giftScreen'), letter = $('letter');
+  const openBtn = $('openBtn'), secretBox = $('secretBox'), secretBtn = $('secretBtn');
+  let opened = false, hearts = 0, toastTimer;
+
+  function burst(amount = 24, symbols = ['♡','♥','✦','✧','🌸']) {
+    for (let i = 0; i < amount; i++) {
+      const p = document.createElement('span');
+      p.className = 'particle';
+      p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      p.style.left = (Math.random() * 100) + '%';
+      p.style.fontSize = (13 + Math.random() * 19) + 'px';
+      p.style.color = ['#e66d9b','#c54479','#f1a7c4','#d67ca1'][Math.floor(Math.random()*4)];
+      p.style.setProperty('--dur', (3.2 + Math.random() * 3.4) + 's');
+      p.style.setProperty('--drift', ((Math.random()-.5)*130) + 'px');
+      p.style.setProperty('--spin', ((Math.random()-.5)*130) + 'deg');
+      p.addEventListener('animationend', () => p.remove());
+      sky.appendChild(p);
+    }
+  }
+  function toast(text) {
+    const el = $('toast');
+    el.textContent = text; el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('show'), 2400);
+  }
+  function openGift() {
+    if (opened) return;
+    opened = true;
+    openBtn.disabled = true;
+    gift.classList.add('open');
+    burst(48, ['♡','♥','✦','✧','🌸','💗']);
+    if (navigator.vibrate) navigator.vibrate([35,25,55]);
+    setTimeout(() => {
+      giftScreen.classList.add('hidden');
+      letter.classList.remove('hidden');
+      burst(16, ['♡','♥','🌸']);
+      window.scrollTo({top:0,behavior:'smooth'});
+    }, 720);
+  }
+  function resetGift() {
+    opened = false; hearts = 0;
+    gift.classList.remove('open');
+    giftScreen.classList.remove('hidden');
+    letter.classList.add('hidden');
+    openBtn.disabled = false;
+    $('counter').textContent = 'Em đã gửi anh 0 trái tim 💗';
+    secretBox.classList.remove('revealed');
+    secretBtn.textContent = 'Mở lời nhắn bí mật';
+    window.scrollTo({top:0,behavior:'smooth'});
+    burst(12);
+  }
+  openBtn.addEventListener('click', openGift);
+  $('againBtn').addEventListener('click', resetGift);
+  secretBtn.addEventListener('click', () => {
+    const reveal = secretBox.classList.toggle('revealed');
+    secretBtn.textContent = reveal ? 'Cất lời nhắn bí mật' : 'Mở lời nhắn bí mật';
+    if (reveal) burst(15, ['♡','♥','💗']);
+  });
+  $('heartBtn').addEventListener('click', () => {
+    hearts++;
+    $('counter').textContent = `Em đã gửi anh ${hearts} trái tim 💗`;
+    burst(hearts % 5 === 0 ? 18 : 7, ['♡','♥','💗']);
+    if (navigator.vibrate) navigator.vibrate(20);
+    toast(hearts === 1 ? 'Anh nhận được trái tim đầu tiên rồi! 💗' : `Anh nhận được ${hearts} trái tim rồi! ♡`);
+  });
+  $('shareBtn').addEventListener('click', async () => {
+    const shareData = {
+      title: 'Lời chúc 20/10 dành cho Bảo Hân ♡',
+      text: 'Bảo Hân ơi, chúc em 20/10 thật vui vẻ, luôn được yêu thương và gặp nhiều điều dịu dàng. Cảm ơn em vì đã khiến những ngày bình thường của anh trở nên đặc biệt hơn. — Anh Trung Kiên ♡',
+      url: location.protocol.startsWith('http') ? location.href : undefined
+    };
+    try {
+      if (navigator.share) await navigator.share(shareData);
+      else await copyText(shareData.text + (shareData.url ? '\n' + shareData.url : ''));
+    } catch (err) {
+      if (err.name !== 'AbortError') {
+        try { await copyText(shareData.text + (shareData.url ? '\n' + shareData.url : '')); }
+        catch (_) { toast('Bạn có thể chụp màn hình và gửi lời chúc cho Hân nhé.'); }
+      }
+    }
+  });
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      toast('Đã sao chép lời chúc để gửi cho Hân ♡');
+      return;
+    }
+    const area = document.createElement('textarea');
+    area.value = text; area.style.position = 'fixed'; area.style.opacity = '0';
+    document.body.appendChild(area); area.select();
+    const ok = document.execCommand('copy'); area.remove();
+    if (ok) toast('Đã sao chép lời chúc để gửi cho Hân ♡');
+    else toast('Không sao chép được — bạn có thể chụp màn hình lời chúc.');
+  }
+  // A small ambient sprinkle, paused automatically when the page is hidden.
+  setInterval(() => {
+    if (!opened && document.visibilityState === 'visible') burst(2, ['♡','✦','🌸']);
+  }, 2200);
+})();
+</script>
+</body>
+</html>
